@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contributing &#8212; sphinx-library  documentation</title>
+    <link rel="stylesheet" href="_static/library/library.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sample Element Styles" href="sample.html" />
+    <link rel="prev" title="Design Notes" href="design-notes.html" />
+ 
+
+<link rel="stylesheet" href="_static/library/type-book.css" type="text/css" />
+<link rel="stylesheet" href="_static/custom.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=0.875" />
+<script>
+  mobile_menu_content = "";
+  function toggleMenu() {
+    var div = document.getElementsByClassName("document").item(0);
+    var btn = document.getElementById("menu-toggler");
+    if(div.classList.contains("mobile-show")) {
+      div.classList.remove("mobile-show");
+      btn.innerHTML = mobile_menu_content;
+    }
+    else {
+      div.classList.add("mobile-show");
+      mobile_menu_content = btn.innerHTML;
+      btn.innerHTML = btn.getAttribute("data-open");
+    }
+  }
+</script>
+  </head>
+<body class="light">
+<div class="document">
+
+  
+  <div class="mobile-menu">
+    
+<button type="button" id="menu-toggler" onclick="toggleMenu();"
+  data-open="× Close">≡ Menu</button>
+<a href="index.html">sphinx-library</a>
+<noscript>
+  <div>
+    JavaScript is required to open/close mobile menu.
+  </div>
+</noscript>
+  </div>
+  
+
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo ">
+  <a href="index.html">sphinx-library</a>
+</h1>
+
+
+
+<p class="description">The typography-centric Sphinx theme that reads like a good book.</p>
+
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><h3>Contents</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design-notes.html">Design Notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample Element Styles</a></li>
+</ul>
+<script>
+  function toggleMode(theme) {
+    document.body.className = theme;
+    localStorage.setItem("sphinx-library-mode", theme);
+  }
+  var theme = localStorage.getItem("sphinx-library-mode");
+  if(theme !== null)
+    toggleMode(theme);
+</script>
+<h3>Reading Mode</h3>
+
+<button type="button" onclick="toggleMode('light');">Light</button>
+<button type="button" onclick="toggleMode('sepia');">Sepia</button>
+<button type="button" onclick="toggleMode('dark');">Dark</button>
+<button type="button" onclick="toggleMode('');">None</button>
+
+<noscript>
+  <div>
+    JavaScript is required to toggle reading modes.
+  </div>
+</noscript>
+        </div>
+      </div>
+  <div class="documentwrapper">
+    
+
+    <article class="body" role="main">
+      
+  <div class="section" id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p>Clone from the git repo at: <a class="reference external" href="https://github.com/vsalvino/sphinx-library">https://github.com/vsalvino/sphinx-library</a>.</p>
+<p>Create a virtual environment and install the dev dependencies:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -r requirements-dev.txt
+</pre></div>
+</div>
+<p>All theme styling is done via SCSS, which is compiled into CSS before publishing
+the package. Do not edit the theme’s CSS files directly.</p>
+<p>Pygments styling is handled directly in <code class="docutils literal notranslate"><span class="pre">sphinx_library.themes</span></code>. These themes
+generate SCSS files which are then compiled into CSS files and included with
+the theme.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">build.py</span></code> script handles all of the SCSS compilation, and also builds the
+project documentation.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python build.py
+</pre></div>
+</div>
+<p>Docs hosting is handled by GitHub pages, so the source RST files are in
+<code class="docutils literal notranslate"><span class="pre">docs-source</span></code> and the built HTML output is in <code class="docutils literal notranslate"><span class="pre">docs/</span></code>. Due to the nature of
+GitHub pages the built HTML should be committed whenever it changes.</p>
+<p>Finally, to build a package and upload to PyPI:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python setup.py sdist bdist_wheel
+<span class="gp">$</span> twine upload dist/*
+</pre></div>
+</div>
+</div>
+
+
+    </article>
+    <nav class="related bottom" role="navigation">
+  <a class="prev" href="design-notes.html" title="Previous">
+    &larr; Design Notes
+  </a>
+  <a class="next" href="sample.html" title="Next">
+    Sample Element Styles &rarr;
+  </a>
+  <div class="clear"></div>
+    </nav>
+    
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+<footer class="footer" role="contentinfo">
+    &copy; Copyright 2020 Vince Salvino.
+  
+  Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
+  <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.
+  
+  <a href="_sources/contributing.rst.txt" rel="nofollow">Page source</a>
+</footer>
+  </body>
+</html>

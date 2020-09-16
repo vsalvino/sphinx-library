@@ -1,0 +1,9 @@
+@import "fonts";
+
+body {
+  @include georgia-native;
+}
+
+code, pre {
+  @include courier-native;
+}

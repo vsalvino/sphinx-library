@@ -1,0 +1,9 @@
+@import "fonts";
+
+body {
+  @include century-native;
+}
+
+code, pre {
+  @include courier-native;
+}

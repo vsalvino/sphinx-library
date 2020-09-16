@@ -1,0 +1,15 @@
+@import "fonts";
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=fallback");
+
+body {
+  font-family: "Fira Sans", $trebuchet-font;
+  font-size: $trebuchet-size;
+  line-height: $trebuchet-line;
+}
+
+code, pre {
+  font-family: "Fira Mono", $mono-font;
+  font-size: $mono-size;
+  line-height: $mono-line;
+}

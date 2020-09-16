@@ -1,0 +1,76 @@
+// Light color mode.
+
+$light:    #fff;
+$light-text: #212529;
+$light-100:  #f8f9fa;
+$light-200:  #e9ecef;
+$light-400:  #ced4da;
+$light-600:  #6c757d;
+$light-link: #247;
+$light-link-hover: #724;
+$light-highlight: #fff6cf;
+
+
+.light {
+  background-color: $light-100;
+  color: $light-text;
+
+  a {
+    color: $light-link;
+    text-decoration-color: $light-400;
+
+    &:hover {
+      color: $light-link-hover;
+    }
+  }
+
+  button,
+  input {
+    background-color: $light;
+    border-color: $light-200;
+
+    &[type="submit"], &[type="button"] {
+      background-color: $light-200;
+
+      &:hover {
+        background-color: $light-400;
+      }
+    }
+  }
+
+  table thead th {
+    border-color: $light-400;
+  }
+  table tbody tr:not(:last-of-type) td {
+    border-color: $light-200;
+  }
+
+  .documentwrapper {
+    background-color: $light;
+  }
+
+  .body .highlighted {
+    background-color: $light-highlight;
+  }
+
+  .headerlink {
+    color: $light-400;
+
+  }
+
+  .related {
+      border-color: $light-200;
+  }
+
+  .footer,
+  .related,
+  .sphinxsidebar .description,
+  .figure .caption,
+  blockquote,
+  .admonition,
+  .sidebar,
+  .topic,
+  .headerlink:hover {
+    color: $light-600;
+  }
+}

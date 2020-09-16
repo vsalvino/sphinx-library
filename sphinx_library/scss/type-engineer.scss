@@ -1,0 +1,15 @@
+@import "fonts";
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=fallback");
+
+body {
+  font-family: "IBM Plex Serif", $cambria-font;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+code, pre {
+  font-family: "IBM Plex Mono", $mono-font;
+  font-size: $mono-size;
+  line-height: $mono-line;
+}

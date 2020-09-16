@@ -1,0 +1,8 @@
+{% if theme_extra_links %}
+<h3>{{ _('Links') }}</h3>
+<ul>
+  {% for text, uri in theme_extra_links.items() %}
+  <li class="toctree-l1"><a href="{{ uri }}">{{ text }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

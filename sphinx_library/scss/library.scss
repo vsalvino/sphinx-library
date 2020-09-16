@@ -1,0 +1,410 @@
+///
+/// Main theme file. Defines layout and colors, but not any direct font
+/// properties other than relative sizes. Font specifics are in separate files
+/// that should override this file in the DOM.
+///
+
+
+/// Variables -----------------------------------------------------------------
+
+$sidebarWidth: 240px;
+$bodyWidth: 784px;
+$indent: 36px;
+$font-smaller: 0.875em;
+$focus-color: #6af;
+
+
+/// Reading modes --------------------------------------------------------------
+
+@import "mode-light";
+@import "mode-sepia";
+@import "mode-dark";
+
+
+/// Common theme styles --------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-variant-ligatures: common-ligatures contextual;
+  margin: 0;
+  padding: 0;
+}
+
+p, code, pre, table {
+  margin: $indent/2 0;
+}
+
+ol, ul {
+  padding: 0;
+  margin: $indent/2 0 $indent/2 $indent;
+
+  li > p:first-of-type {
+    margin-top: 0;
+  }
+
+  li > p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  ol, ul {
+    margin: 0 0 0 $indent/2;
+  }
+}
+
+li {
+  margin: 0.25em 0;
+}
+
+td, th {
+  > p:first-of-type {
+    margin-top: 0;
+  }
+
+  > p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-skip-ink: all;
+
+  &:hover {
+    text-decoration-style: solid;
+    text-decoration-color: unset;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.6em 0 0.8em 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: normal;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1.15em;
+}
+h5, h6 {
+  font-size: 1em;
+}
+
+button,
+input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+  padding: 0 0.4em;
+  border-style: solid;
+  border-width: 1.5px;
+
+  &:focus {
+    outline: none;
+    border-color: $focus-color;
+  }
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+
+/// Utilities -----------------------------------------------------------------
+
+.clear {
+  clear: both;
+}
+
+
+/// Main sections -------------------------------------------------------------
+
+.document {
+  background-color: inherit;
+  margin: 0 auto;
+  padding: 0;
+  max-width: $sidebarWidth + $bodyWidth;
+}
+
+// Right side of page.
+.documentwrapper {
+  padding: 0 $indent*2 $indent $indent*2;
+  float: left;
+  width: $bodyWidth;
+}
+
+// Left side of page.
+.sphinxsidebar {
+  background-color: inherit;
+  font-size: $font-smaller;
+  float: left;
+  width: $sidebarWidth;
+  padding: $indent/2 $indent/2 $indent/2 0;
+  overflow-wrap: break-word;
+
+  ol, ul {
+    padding: 0;
+    margin-left: 0;
+    list-style: none;
+  }
+
+  .toctree-l1 {
+    ol, ul {
+      list-style: disc;
+    }
+
+    li {
+      margin-left: $indent/2;
+    }
+  }
+
+  .toctree-l2 {
+    font-size: 0.9em;
+  }
+
+  a, a:hover {
+    color: inherit;
+  }
+
+  input {
+    width: 80%;
+  }
+  input[type="submit"] {
+    float: right;
+    width: 20%;
+  }
+
+  p.logo {
+    margin: 0;
+  }
+  h1.logo {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  h1.logo.hasimg {
+    margin: 0.8em 0;
+    text-align: center;
+  }
+
+  .description {
+    font-style: italic;
+    line-height: 1.4;
+  }
+}
+
+// Footer
+.footer {
+  max-width: $sidebarWidth + $bodyWidth;
+  margin: $indent/2 auto;
+  text-align: right;
+  font-size: $font-smaller;
+}
+
+// Relbars
+.related {
+  padding: $indent/2 0;
+
+  &.top, &.breadcrumbs {
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+  }
+  &.bottom {
+    border-top-style: solid;
+    border-top-width: 1.5px;
+    margin-top: $indent;
+  }
+  a {
+    color: inherit;
+  }
+  .delim {
+    padding: 0 0.5em;
+  }
+  .prev {
+    float: left;
+  }
+  .next {
+    float: right;
+  }
+}
+
+
+/// Sphinx Elements ------------------------------------------------------------
+
+.body {
+  hyphens: auto;
+}
+
+// Permalinks
+
+.headerlink {
+  display: none;
+  padding: .25em 0.5em;
+  text-decoration: none;
+}
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink,
+h4:hover .headerlink,
+h5:hover .headerlink,
+h6:hover .headerlink {
+  display: inline;
+}
+
+// Admonitions and asides.
+
+blockquote,
+.admonition,
+.sidebar,
+.topic {
+  margin: $indent/2 0 $indent $indent/2;
+  padding: 0;
+  font-style: italic;
+
+  [class$="-title"] {
+    font-weight: bold;
+  }
+}
+
+.admonition-title::after {
+  content: ":"
+}
+
+// Images and figures
+
+img {
+  text-align: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.figure {
+  &.align-default,
+  &.align-center {
+    text-align: center;
+  }
+  &.align-left {
+    text-align: left;
+  }
+  &.align-right {
+    text-align: right;
+  }
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  .caption {
+    font-style: italic;
+    font-size: $font-smaller;
+    margin: $indent/2 $indent;
+  }
+}
+
+// Tables
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+
+  td, th {
+    border: none;
+    padding: 0.25em 0.5em;
+    margin: 0;
+  }
+  thead {
+    th {
+      border-bottom-style: solid;
+      border-bottom-width: 1.5px;
+      font-weight: bold;
+    }
+  }
+  tbody {
+    tr:not(:last-of-type) td {
+      border-bottom-style: solid;
+      border-bottom-width: 1.5px;
+    }
+  }
+}
+
+// Code
+
+code {
+  padding: 0 0.5em;
+}
+
+pre {
+  font-style: normal;
+  font-weight: normal;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  overflow-y: visible;
+  margin: $indent 0 $indent $indent;
+}
+
+// Mobile menu.
+
+.mobile-menu {
+  display: none;
+  text-align: center;
+  padding: 1px 0;
+
+  button {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  a {
+    font-weight: bold;
+    color: inherit;
+  }
+}
+
+
+/// Responsive styles ---------------------------------------------------------
+
+// Tablet
+@media(max-width: $sidebarWidth + $bodyWidth) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .sphinxsidebar {
+    display: none;
+    padding: $indent/2;
+    width: $sidebarWidth + ($indent/2);
+  }
+  .documentwrapper {
+    width: 100%;
+    padding: $indent;
+  }
+
+  .mobile-show {
+    .sphinxsidebar {
+      display: block;
+      position: absolute;
+    }
+  }
+}
+
+// Mobile
+@media(max-width: 767px) {
+  .documentwrapper {
+    padding: $indent/2;
+  }
+}

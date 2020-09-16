@@ -1,0 +1,75 @@
+// Sepia color mode.
+
+$sepia:      #f6f0e6;
+$sepia-text: #4b3626;
+$sepia-100:  darken($sepia, 3%);
+$sepia-200:  darken($sepia, 10%);
+$sepia-400:  darken($sepia, 20%);
+$sepia-600:  lighten($sepia-text, 15%);
+$sepia-link: #247;
+$sepia-link-hover: #724;
+$sepia-highlight: #fea;
+
+
+.sepia {
+  background-color: $sepia-100;
+  color: $sepia-text;
+
+  a {
+    color: $sepia-link;
+    text-decoration-color: $sepia-400;
+
+    &:hover {
+      color: $sepia-link-hover;
+    }
+  }
+
+  button,
+  input {
+    background-color: $sepia;
+    border-color: $sepia-200;
+
+    &[type="submit"], &[type="button"] {
+      background-color: $sepia-200;
+
+      &:hover {
+        background-color: $sepia-400;
+      }
+    }
+  }
+
+  table thead th {
+    border-color: $sepia-400;
+  }
+  table tbody tr:not(:last-of-type) td {
+    border-color: $sepia-200;
+  }
+
+  .documentwrapper {
+    background-color: $sepia;
+  }
+
+  .body .highlighted {
+    background-color: $sepia-highlight;
+  }
+
+  .headerlink {
+    color: $sepia-400;
+  }
+
+  .related {
+    border-color: $sepia-200;
+  }
+
+  .footer,
+  .related,
+  .sphinxsidebar .description,
+  .figure .caption,
+  blockquote,
+  .admonition,
+  .sidebar,
+  .topic,
+  .headerlink:hover {
+    color: $sepia-600;
+  }
+}

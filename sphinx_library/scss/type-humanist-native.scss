@@ -1,0 +1,9 @@
+@import "fonts";
+
+body {
+  @include trebuchet-native;
+}
+
+code, pre {
+  @include mono-native;
+}

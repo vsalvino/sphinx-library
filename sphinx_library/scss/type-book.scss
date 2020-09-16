@@ -1,0 +1,20 @@
+@import "fonts";
+
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=fallback");
+
+body {
+  // Unfortunately "Crimson Pro" is not metric compatible with Georgia, so we
+  // cannot easily fallback to Georgia. Instead fall back to more specific fonts
+  // with closer metrics to Crimson so the text will not look giant.
+  font-family: "Crimson Pro", "Hoefler Text", "Linux Libertine", "Linux Libertine O", "Garamond", "Nimbus Serif", "FreeSerif", serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+code, pre {
+  @include courier-native;
+}

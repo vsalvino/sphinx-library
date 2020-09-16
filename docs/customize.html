@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customization &#8212; sphinx-library  documentation</title>
+    <link rel="stylesheet" href="_static/library/library.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Design Notes" href="design-notes.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+ 
+
+<link rel="stylesheet" href="_static/library/type-book.css" type="text/css" />
+<link rel="stylesheet" href="_static/custom.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=0.875" />
+<script>
+  mobile_menu_content = "";
+  function toggleMenu() {
+    var div = document.getElementsByClassName("document").item(0);
+    var btn = document.getElementById("menu-toggler");
+    if(div.classList.contains("mobile-show")) {
+      div.classList.remove("mobile-show");
+      btn.innerHTML = mobile_menu_content;
+    }
+    else {
+      div.classList.add("mobile-show");
+      mobile_menu_content = btn.innerHTML;
+      btn.innerHTML = btn.getAttribute("data-open");
+    }
+  }
+</script>
+  </head>
+<body class="light">
+<div class="document">
+
+  
+  <div class="mobile-menu">
+    
+<button type="button" id="menu-toggler" onclick="toggleMenu();"
+  data-open="× Close">≡ Menu</button>
+<a href="index.html">sphinx-library</a>
+<noscript>
+  <div>
+    JavaScript is required to open/close mobile menu.
+  </div>
+</noscript>
+  </div>
+  
+
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo ">
+  <a href="index.html">sphinx-library</a>
+</h1>
+
+
+
+<p class="description">The typography-centric Sphinx theme that reads like a good book.</p>
+
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><h3>Contents</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Customization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-options">Sphinx Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#theme-options">Theme Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#typography">Typography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-css">Custom CSS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design-notes.html">Design Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample Element Styles</a></li>
+</ul>
+<script>
+  function toggleMode(theme) {
+    document.body.className = theme;
+    localStorage.setItem("sphinx-library-mode", theme);
+  }
+  var theme = localStorage.getItem("sphinx-library-mode");
+  if(theme !== null)
+    toggleMode(theme);
+</script>
+<h3>Reading Mode</h3>
+
+<button type="button" onclick="toggleMode('light');">Light</button>
+<button type="button" onclick="toggleMode('sepia');">Sepia</button>
+<button type="button" onclick="toggleMode('dark');">Dark</button>
+<button type="button" onclick="toggleMode('');">None</button>
+
+<noscript>
+  <div>
+    JavaScript is required to toggle reading modes.
+  </div>
+</noscript>
+        </div>
+      </div>
+  <div class="documentwrapper">
+    
+
+    <article class="body" role="main">
+      
+  <div class="section" id="customization">
+<h1>Customization<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sphinx-options">
+<h2>Sphinx Options<a class="headerlink" href="#sphinx-options" title="Permalink to this headline">¶</a></h2>
+<p>In addition to theme options (below), some common Sphinx options (set in
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>) are also respected by the theme. See the full link of <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html">Sphinx
+configuration options</a>.</p>
+<ul class="simple">
+<li><p><strong>html_logo</strong> — Path to a logo image which will appear in the sidebar.</p></li>
+<li><p><strong>project</strong> — The name of your project. It appears in the sidebar and
+elsewhere in the docs.</p></li>
+<li><p><strong>copyright</strong> — String containing date and/or owner of the project.</p></li>
+<li><p><strong>html_last_updated_fmt</strong> — If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, adds a timestamp in the footer.</p></li>
+<li><p><strong>html_show_copyright</strong> — Show the <code class="docutils literal notranslate"><span class="pre">copyright</span></code> field in the footer.</p></li>
+<li><p><strong>html_show_sourcelink</strong> — Show the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> source link in the footer.</p></li>
+<li><p><strong>html_show_sphinx</strong> — Show “Created using Sphinx” in the footer.</p></li>
+</ul>
+</div>
+<div class="section" id="theme-options">
+<h2>Theme Options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
+<p>Options are set in the <code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code> variable in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;show_breadcrumbs&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The following theme options are available:</p>
+<ul>
+<li><p><strong>description</strong> — Short text blurb about your project, to appear under the
+logo or project name.</p></li>
+<li><p><strong>extra_links</strong> — Dictionary mapping link names to link targets; these
+will be added in the sidebar (if you’ve set <code class="docutils literal notranslate"><span class="pre">extralinks.html</span></code> via the
+<code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code> option). This is useful for adding GitHub links, donate
+links, etc. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
+<span class="n">html_theme_options</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;extra_links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Source Code&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>globaltoc_collapse</strong> — Boolean to only expand subsections of the current
+document in <code class="docutils literal notranslate"><span class="pre">globaltoc.html</span></code>. Defaults to True.</p></li>
+<li><p><strong>globaltoc_includehidden</strong> —- Boolean to show even those subsections in
+<code class="docutils literal notranslate"><span class="pre">globaltoc.html</span></code> which have been included with the <code class="docutils literal notranslate"><span class="pre">:hidden:</span></code>
+flag of the toctree directive. Defaults to True.</p></li>
+<li><p><strong>globaltoc_maxdepth</strong> — Integer of the maximum depth of the toctree in
+<code class="docutils literal notranslate"><span class="pre">globaltoc.html</span></code>. Set it to -1 to allow unlimited depth.
+Defaults to the max depth selected in the toctree directive.</p></li>
+<li><p><strong>reading_mode</strong> — Set the default reading mode color scheme. One of
+<code class="docutils literal notranslate"><span class="pre">light</span></code>, <code class="docutils literal notranslate"><span class="pre">sepia</span></code>, or <code class="docutils literal notranslate"><span class="pre">dark</span></code>. Set to <code class="docutils literal notranslate"><span class="pre">None</span></code> to use the browser’s
+default styles. Defaults to light.</p></li>
+<li><p><strong>show_breadcrumbs</strong> — Boolean to show breadcrumb links of ancestors to the
+current document at the top of the page. Defaults to False.</p></li>
+<li><p><strong>show_project_name</strong> — Set to <code class="docutils literal notranslate"><span class="pre">False</span></code> to hide the project name in the
+sidebar.</p></li>
+<li><p><strong>show_version</strong> — Shows the project version below the logo/name in the
+sidebar.</p></li>
+<li><p><strong>show_relbar_bottom</strong> — Boolean to show Previous/Next links at the bottom
+of the page. Defaults to True.</p></li>
+<li><p><strong>show_relbar_top</strong> — Boolean to show Previous/Next links at the top of the
+page. Defaults to False.</p></li>
+<li><p><strong>typography</strong> — The typeface stack to use throughout the docs. One of the
+following values:</p>
+<ul class="simple">
+<li><p>academy</p></li>
+<li><p>academy-native</p></li>
+<li><p>book</p></li>
+<li><p>book-native</p></li>
+<li><p>engineer</p></li>
+<li><p>engineer-native</p></li>
+<li><p>humanist</p></li>
+<li><p>humanist-native</p></li>
+<li><p>swiss</p></li>
+<li><p>swiss-native</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;typography&quot;</span><span class="p">:</span> <span class="s2">&quot;humanist&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>See typography section below for more details.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="typography">
+<h2>Typography<a class="headerlink" href="#typography" title="Permalink to this headline">¶</a></h2>
+<p>Several hand-tuned typography stacks are included to change the feel of your
+documentation. Each features carefully selected typeface pairings which have
+been balanced with the theme layout to create a book-like reading experience.</p>
+<ul class="simple">
+<li><p><strong>Book</strong> — Highly legible type inspired by printed books. The default, and
+good for general purpose use.</p></li>
+<li><p><strong>Humanist</strong> — Another highly legible type, with a fresh and more casual
+look.</p></li>
+<li><p><strong>Academy</strong> — An elegant and formal early 20th-century type favored by
+academic publications and legal documents.</p></li>
+<li><p><strong>Engineer</strong> — A semi-slab-serif type; formal but much cleaner and more
+modern than “academy”.</p></li>
+<li><p><strong>Swiss</strong> — Sans-serif type providing an austere but clean look.</p></li>
+</ul>
+<p>These stacks utilize the Google Fonts and jsDelivr CDN to load web fonts (and
+include appropriate fallbacks). Each stack also includes a <code class="docutils literal notranslate"><span class="pre">-native</span></code> version,
+which does not load any web fonts but instead uses fonts available from the
+user’s computer. Use this if you seek absolute minimal resource usage or plan to
+primarily distribute the HTML offline.</p>
+<p>For more details, see <a class="reference internal" href="design-notes.html"><span class="doc">Design Notes</span></a>.</p>
+<p>To implement your own custom type stack, set the <code class="docutils literal notranslate"><span class="pre">typography</span></code> option to
+<code class="docutils literal notranslate"><span class="pre">None</span></code> and then add your own styles following the Custom CSS instructions
+below.</p>
+</div>
+<div class="section" id="custom-css">
+<h2>Custom CSS<a class="headerlink" href="#custom-css" title="Permalink to this headline">¶</a></h2>
+<p>Library’s CSS is designed to be easily overridden. This means it avoids complex
+queries, and does not specify attributes more than once where possible (e.g.
+color, font, font-size, etc. are only set on the <code class="docutils literal notranslate"><span class="pre">body</span></code> element, so changing
+it once here will affect the whole document).</p>
+<p>If you need to modify Library’s default CSS styles, you may provide a custom
+stylesheet as follows:</p>
+<ul class="simple">
+<li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">custom.css</span></code> in your static folder (typically
+named <code class="docutils literal notranslate"><span class="pre">_static/</span></code>).</p></li>
+<li><p>Set the Sphinx option <a class="reference external" href="http://www.sphinx-doc.org/en/stable/config.html#confval-html_static_path">html_static_path</a>
+to either that file’s path, or the directory it lives within (i.e.
+<code class="docutils literal notranslate"><span class="pre">&quot;_static&quot;</span></code>).</p></li>
+</ul>
+</div>
+</div>
+
+
+    </article>
+    <nav class="related bottom" role="navigation">
+  <a class="prev" href="installation.html" title="Previous">
+    &larr; Installation
+  </a>
+  <a class="next" href="design-notes.html" title="Next">
+    Design Notes &rarr;
+  </a>
+  <div class="clear"></div>
+    </nav>
+    
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+<footer class="footer" role="contentinfo">
+    &copy; Copyright 2020 Vince Salvino.
+  
+  Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
+  <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.
+  
+  <a href="_sources/customize.rst.txt" rel="nofollow">Page source</a>
+</footer>
+  </body>
+</html>

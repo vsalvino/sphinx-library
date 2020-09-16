@@ -1,0 +1,19 @@
+@import "fonts";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=fallback');
+
+body {
+  font-family: "Inter", $helvetica-font;
+  font-size: $helvetica-size;
+  line-height: $helvetica-line;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+code, pre {
+  font-family: "Roboto Mono", $mono-font;
+  font-size: $mono-size;
+  line-height: $mono-line;
+}

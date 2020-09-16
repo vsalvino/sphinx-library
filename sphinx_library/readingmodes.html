@@ -1,0 +1,21 @@
+<script>
+  function toggleMode(theme) {
+    document.body.className = theme;
+    localStorage.setItem("sphinx-library-mode", theme);
+  }
+  var theme = localStorage.getItem("sphinx-library-mode");
+  if(theme !== null)
+    toggleMode(theme);
+</script>
+<h3>{{ _('Reading Mode') }}</h3>
+{% block reading_mode_buttons %}
+<button type="button" onclick="toggleMode('light');">{{ _('Light') }}</button>
+<button type="button" onclick="toggleMode('sepia');">{{ _('Sepia') }}</button>
+<button type="button" onclick="toggleMode('dark');">{{ _('Dark') }}</button>
+<button type="button" onclick="toggleMode('');">{{ _('None') }}</button>
+{% endblock %}
+<noscript>
+  <div>
+    {{ _('JavaScript is required to toggle reading modes') }}.
+  </div>
+</noscript>

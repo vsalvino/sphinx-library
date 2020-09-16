@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Element Styles &#8212; sphinx-library  documentation</title>
+    <link rel="stylesheet" href="_static/library/library.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Contributing" href="contributing.html" />
+ 
+
+<link rel="stylesheet" href="_static/library/type-book.css" type="text/css" />
+<link rel="stylesheet" href="_static/custom.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=0.875" />
+<script>
+  mobile_menu_content = "";
+  function toggleMenu() {
+    var div = document.getElementsByClassName("document").item(0);
+    var btn = document.getElementById("menu-toggler");
+    if(div.classList.contains("mobile-show")) {
+      div.classList.remove("mobile-show");
+      btn.innerHTML = mobile_menu_content;
+    }
+    else {
+      div.classList.add("mobile-show");
+      mobile_menu_content = btn.innerHTML;
+      btn.innerHTML = btn.getAttribute("data-open");
+    }
+  }
+</script>
+  </head>
+<body class="light">
+<div class="document">
+
+  
+  <div class="mobile-menu">
+    
+<button type="button" id="menu-toggler" onclick="toggleMenu();"
+  data-open="× Close">≡ Menu</button>
+<a href="index.html">sphinx-library</a>
+<noscript>
+  <div>
+    JavaScript is required to open/close mobile menu.
+  </div>
+</noscript>
+  </div>
+  
+
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo ">
+  <a href="index.html">sphinx-library</a>
+</h1>
+
+
+
+<p class="description">The typography-centric Sphinx theme that reads like a good book.</p>
+
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><h3>Contents</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design-notes.html">Design Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sample Element Styles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ligatures-kerning">Ligatures &amp; Kerning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#admonitions">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#asides">Asides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#headings-heading-2-lorem-ipsum-dolor-sit-amet-consectetur-adipiscing">Headings: Heading 2 Lorem Ipsum Dolor sit Amet Consectetur Adipiscing</a></li>
+</ul>
+</li>
+</ul>
+<script>
+  function toggleMode(theme) {
+    document.body.className = theme;
+    localStorage.setItem("sphinx-library-mode", theme);
+  }
+  var theme = localStorage.getItem("sphinx-library-mode");
+  if(theme !== null)
+    toggleMode(theme);
+</script>
+<h3>Reading Mode</h3>
+
+<button type="button" onclick="toggleMode('light');">Light</button>
+<button type="button" onclick="toggleMode('sepia');">Sepia</button>
+<button type="button" onclick="toggleMode('dark');">Dark</button>
+<button type="button" onclick="toggleMode('');">None</button>
+
+<noscript>
+  <div>
+    JavaScript is required to toggle reading modes.
+  </div>
+</noscript>
+        </div>
+      </div>
+  <div class="documentwrapper">
+    
+
+    <article class="body" role="main">
+      
+  <div class="section" id="sample-element-styles">
+<h1>Sample Element Styles<a class="headerlink" href="#sample-element-styles" title="Permalink to this headline">¶</a></h1>
+<p>This document provides a sampling of commonly used reStructuredText directives
+and elements for testing out and viewing the theme.</p>
+<p>See the full <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html">reStructuredText Markup Specification</a>.</p>
+<div class="section" id="ligatures-kerning">
+<h2>Ligatures &amp; Kerning<a class="headerlink" href="#ligatures-kerning" title="Permalink to this headline">¶</a></h2>
+<p>Ligatures and kerning: field, fjord, The, Taft, past, act, Quick, waffle, oooh,
+aaah.</p>
+</div>
+<div class="section" id="admonitions">
+<h2>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+</div>
+<div class="section" id="asides">
+<h2>Asides<a class="headerlink" href="#asides" title="Permalink to this headline">¶</a></h2>
+<p>Epigraph:</p>
+<blockquote class="epigraph">
+<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+<p class="attribution">—Julius Caesar</p>
+</div></blockquote>
+<p>Highlights:</p>
+<blockquote class="highlights">
+<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div></blockquote>
+<p>Pull quote:</p>
+<blockquote class="pull-quote">
+<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+<p class="attribution">—Julius Caesar</p>
+</div></blockquote>
+<p>Quote:</p>
+<blockquote>
+<div><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.”</p>
+<p class="attribution">—Julius Caesar</p>
+</div></blockquote>
+<p>Sidebar:</p>
+<div class="sidebar">
+<p class="sidebar-title">Optional title</p>
+<p class="sidebar-subtitle">Optional subtitle</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<p>Topic:</p>
+<div class="topic">
+<p class="topic-title">Required title</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+</div>
+<div class="section" id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p>Lorem <code class="docutils literal notranslate"><span class="pre">ipsum</span></code> dolor <code class="docutils literal notranslate"><span class="pre">sit</span> <span class="pre">amet</span></code>, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.readers</span> <span class="kn">import</span> <span class="n">standalone</span>
+
+<span class="k">class</span> <span class="nc">SphinxBaseReader</span><span class="p">(</span><span class="n">standalone</span><span class="o">.</span><span class="n">Reader</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">A base class of readers for Sphinx.</span>
+<span class="sd">This replaces reporter by Sphinx&#39;s on generating document.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">transforms</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># type: List[Type[Transform]]</span>
+
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">sphinx.application</span> <span class="kn">import</span> <span class="n">Sphinx</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Sphinx</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_app</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_app</span><span class="o">.</span><span class="n">env</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">app</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">:</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;SphinxBaseReader.app is deprecated.&#39;</span><span class="p">,</span>
+                  <span class="n">RemovedInSphinx40Warning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_app</span>
+</pre></div>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<p>Images, C/O <a class="reference external" href="https://placeholder.com/">https://placeholder.com/</a>.</p>
+<p>Image:</p>
+<img alt="https://via.placeholder.com/300.png?text=Placeholder" src="https://via.placeholder.com/300.png?text=Placeholder" />
+<p>Figure:</p>
+<div class="figure align-default" id="id1">
+<img alt="Placeholder" src="https://via.placeholder.com/300.png?text=Placeholder" />
+<p class="caption"><span class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto docutils align-default" id="id2">
+<caption><span class="caption-text">Truth table for “not”</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>not A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="headings-heading-2-lorem-ipsum-dolor-sit-amet-consectetur-adipiscing">
+<h2>Headings: Heading 2 Lorem Ipsum Dolor sit Amet Consectetur Adipiscing<a class="headerlink" href="#headings-heading-2-lorem-ipsum-dolor-sit-amet-consectetur-adipiscing" title="Permalink to this headline">¶</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Laoreet id donec ultrices tincidunt. Nulla aliquet porttitor lacus luctus
+accumsan tortor posuere. Nibh ipsum consequat nisl vel pretium lectus quam.
+Morbi tempus iaculis urna id volutpat lacus laoreet. Mi ipsum faucibus vitae
+aliquet nec ullamcorper. Nisl tincidunt eget nullam non nisi est sit amet. Ac ut
+consequat semper viverra nam libero justo.</p>
+<ul class="simple">
+<li><p><strong>Laoreet id donec</strong> — Laoreet id donec ultrices tincidunt.</p></li>
+<li><p><strong>Nulla aliquet porttitor</strong> — Nulla aliquet porttitor lacus luctus accumsan
+tortor posuere. Odio ut sem nulla pharetra diam sit. Ac ut consequat semper
+viverra nam libero justo. Aliquet sagittis id consectetur purus.</p>
+<ul>
+<li><p>Convallis aenean et tortor at.</p></li>
+<li><p>Sit amet consectetur adipiscing elit ut aliquam purus sit.</p></li>
+<li><p>Varius morbi enim nunc faucibus a pellentesque.</p></li>
+</ul>
+</li>
+<li><p><strong>Nisl tincidunt eget</strong> — Nisl tincidunt eget nullam non nisi est sit amet.</p></li>
+</ul>
+<p>Orci eu lobortis elementum nibh tellus. Etiam sit amet nisl purus in mollis nunc
+sed. Convallis aenean et tortor at. Sit amet consectetur adipiscing elit ut
+aliquam purus sit. Varius morbi enim nunc faucibus a pellentesque sit amet
+porttitor.</p>
+<div class="section" id="heading-3-porttitor-rhoncus-dolor">
+<h3>Heading 3 Porttitor Rhoncus Dolor<a class="headerlink" href="#heading-3-porttitor-rhoncus-dolor" title="Permalink to this headline">¶</a></h3>
+<p>Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Molestie
+nunc non blandit massa enim. Tempor id eu nisl nunc mi ipsum faucibus vitae.
+Ornare arcu dui vivamus arcu felis. Augue lacus viverra vitae congue eu
+consequat ac felis. Sit amet dictum sit amet justo donec enim diam. Augue lacus
+viverra vitae congue eu consequat.</p>
+<ol class="arabic simple">
+<li><p><strong>Laoreet id donec</strong> — Laoreet id donec ultrices tincidunt.</p></li>
+<li><p><strong>Nulla aliquet porttitor</strong> — Nulla aliquet porttitor lacus luctus accumsan
+tortor posuere. Odio ut sem nulla pharetra diam sit. Ac ut consequat semper
+viverra nam libero justo. Aliquet sagittis id consectetur purus.</p>
+<ol class="arabic simple">
+<li><p>Convallis aenean et tortor at.</p></li>
+<li><p>Sit amet consectetur adipiscing elit ut aliquam purus sit.</p></li>
+<li><p>Varius morbi enim nunc faucibus a pellentesque.</p></li>
+</ol>
+</li>
+<li><p><strong>Nisl tincidunt eget</strong> — Nisl tincidunt eget nullam non nisi est sit amet.</p></li>
+</ol>
+<div class="section" id="heading-4-velit-scelerisque-in-dictum">
+<h4>Heading 4 Velit Scelerisque in Dictum<a class="headerlink" href="#heading-4-velit-scelerisque-in-dictum" title="Permalink to this headline">¶</a></h4>
+<p>Velit scelerisque in dictum non consectetur a. Vulputate ut pharetra sit amet
+aliquam. Justo laoreet sit amet cursus sit amet dictum sit. Aliquam eleifend mi
+in nulla posuere sollicitudin. Enim nulla aliquet porttitor lacus luctus
+accumsan tortor.</p>
+<div class="section" id="heading-5-purus-ut-faucibus-pulvinar">
+<h5>Heading 5 Purus ut Faucibus Pulvinar<a class="headerlink" href="#heading-5-purus-ut-faucibus-pulvinar" title="Permalink to this headline">¶</a></h5>
+<p>Purus ut faucibus pulvinar elementum integer enim neque volutpat ac. Vitae et
+leo duis ut. Leo urna molestie at elementum. Ipsum nunc aliquet bibendum enim
+facilisis. Sit amet cursus sit amet. Dolor magna eget est lorem ipsum dolor sit.</p>
+<div class="section" id="heading-6-nunc-id-cursus-metus-aliquam">
+<h6>Heading 6 Nunc id Cursus Metus Aliquam<a class="headerlink" href="#heading-6-nunc-id-cursus-metus-aliquam" title="Permalink to this headline">¶</a></h6>
+<p>Nunc id cursus metus aliquam eleifend mi in. Egestas tellus rutrum tellus
+pellentesque eu tincidunt tortor aliquam. Tellus in hac habitasse platea
+dictumst vestibulum rhoncus est. Volutpat commodo sed egestas egestas fringilla.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </article>
+    <nav class="related bottom" role="navigation">
+  <a class="prev" href="contributing.html" title="Previous">
+    &larr; Contributing
+  </a>
+  <div class="clear"></div>
+    </nav>
+    
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+<footer class="footer" role="contentinfo">
+    &copy; Copyright 2020 Vince Salvino.
+  
+  Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
+  <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.
+  
+  <a href="_sources/sample.rst.txt" rel="nofollow">Page source</a>
+</footer>
+  </body>
+</html>

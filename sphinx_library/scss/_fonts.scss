@@ -1,0 +1,145 @@
+///
+/// Contains extensive fallbacks and specific metrics for compatible typefaces.
+///
+
+
+// Cambria
+$cambria-font:
+  // Windows & MS Office
+  "Cambria",
+  // macOS
+  "Charter",
+  // Linux
+  "Bitstream Charter", "Linux Libertine", "Linux Libertine O",
+  // Fallback
+  serif;
+$cambria-size: 17.5px;
+$cambria-line: 1.7;
+@mixin cambria-native {
+  font-family: $cambria-font;
+  font-size: $cambria-size;
+  line-height: $cambria-line;
+}
+
+
+// Century
+$century-font:
+  // Windows & MS Office
+  "Century Schoolbook", "Century",
+  // Linux - these are nearly identical to Century
+  "C059", "URW Bookman",
+  // macOS
+  "Didot",
+  // Fallback
+  serif;
+$century-size: 17px;
+$century-line: 1.7;
+@mixin century-native {
+  font-family: $century-font;
+  font-size: $century-size;
+  line-height: $century-line;
+}
+
+
+// Courier
+$courier-font:
+  // Specials that might be installed.
+  "Courier Prime", "Courier 10 Pitch",
+  // Linux
+  "Nimbus Mono", "Nimbus Mono L", "Nimbus Mono PS", "FreeMono",
+  // Standard
+  "Courier", "Courier New",
+  // Fallback
+  monospace;
+$courier-size: 14px;
+$courier-line: 1.5;
+@mixin courier-native {
+  font-family: $courier-font;
+  font-size: $courier-size;
+  line-height: $courier-line;
+}
+
+
+// Georgia
+$georgia-font:
+  // Specials that might be installed.
+  "Georgia Pro",
+  // Standard (websafe on Windows & macOS)
+  "Georgia",
+  // Linux - there is no common equivalent so try many different fallbacks.
+  "Bitstream Charter",
+  "P052", "Palatino", "Palatino Linotype",
+  "Noto Serif",
+  "Noto Serif CJK JP", "Noto Serif CJK KR",
+  "Noto Serif CJK SC", "Noto Serif CJK TC",
+  "DejaVu Serif",
+  // Fallback
+  serif;
+$georgia-size: 17px;
+$georgia-line: 1.7;
+@mixin georgia-native {
+  font-family: $georgia-font;
+  font-size: $georgia-size;
+  line-height: $georgia-line;
+}
+
+
+// Helvetica
+$helvetica-font:
+  // Specials that might be installed.
+  "Helvetica Now", "Helvetica Neue", "Arial Nova",
+  // Linux (preferred)
+  "Nimbus Sans", "Nimbus Sans L", "Nimbus Sans PS", "Roboto", "FreeSans",
+  // Standards
+  "Helvetica", "Arial",
+  // Linux (metric-compatible fallbacks)
+  "Liberation Sans", "Arimo",
+  // Fallback
+  sans-serif;
+$helvetica-size: 17px;
+$helvetica-line: 1.7;
+@mixin helvetica-native {
+  font-family: $helvetica-font;
+  font-size: $helvetica-size;
+  line-height: $helvetica-line;
+}
+
+
+// Monospace (generic sans-serif variety)
+$mono-font:
+  // Windows
+  "Consolas",
+  // macOS
+  "Menlo",
+  // Linux
+  "Roboto Mono", "Bitstream Vera Sans Mono", "DejaVu Sans Mono",
+  // Fallback
+  monospace;
+$mono-size: 14px;
+$mono-line: 1.6;
+@mixin mono-native {
+  font-family: $mono-font;
+  font-size: $mono-size;
+  line-height: $mono-line;
+}
+
+
+// Trebuchet
+$trebuchet-font:
+  // Standard (websafe on Windows & macOS)
+  "Trebuchet MS",
+  // Linux - there are no common humanists fonts on linux, so search for
+  // some distro-specific ones that have similar look and metrics.
+  "Ubuntu", "Cantarell", "Open Sans", "Oxygen", "Oxygen Sans", "Oxygen-Sans",
+  "Red Hat Text", "Red Hat", "Noto Sans",
+  "Noto Sans CJK JP", "Noto Sans CJK KR",
+  "Noto Sans CJK SC", "Noto Sans CJK TC",
+  // Fallback.
+  sans-serif;
+$trebuchet-size: 17px;
+$trebuchet-line: 1.7;
+@mixin trebuchet-native {
+  font-family: $trebuchet-font;
+  font-size: $trebuchet-size;
+  line-height: $trebuchet-line;
+}

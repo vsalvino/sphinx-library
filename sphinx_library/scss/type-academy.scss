@@ -1,0 +1,16 @@
+@import "fonts";
+
+@import url("https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/serif.css");
+@import url("https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/typewriter.css");
+
+body {
+  font-family: "Computer Modern Serif", $century-font;
+  font-size: 17.5px;
+  line-height: 1.6;
+}
+
+code, pre {
+  font-family: "Computer Modern Typewriter", $courier-font;
+  font-size: 15px;
+  line-height: 1.4;
+}

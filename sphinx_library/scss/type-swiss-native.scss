@@ -1,0 +1,13 @@
+@import "fonts";
+
+body {
+  @include helvetica-native;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+code, pre {
+  @include mono-native;
+}

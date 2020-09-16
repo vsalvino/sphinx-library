@@ -1,0 +1,13 @@
+{% if theme_show_project_name|tobool %}
+<h1 class="logo {% if logo %}hasimg{% endif %}">
+  <a href="{{ pathto(master_doc) }}">{{ project }}</a>
+</h1>
+{% endif %}
+
+{% if theme_description %}
+<p class="description">{{ theme_description }}</p>
+{% endif %}
+
+{% if theme_show_version|tobool and version %}
+<p class="description">{{ _('Version') }} {{version}}</p>
+{% endif %}

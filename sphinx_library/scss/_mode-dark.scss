@@ -1,0 +1,77 @@
+// Dark color mode.
+
+$dark:      #161718;
+$dark-text: #e0e2e4;
+$dark-100:  #000;
+$dark-200:  lighten($dark, 10%);
+$dark-400:  lighten($dark, 20%);
+$dark-600:  darken($dark-text, 15%);
+$dark-link: #9ad;
+$dark-link-hover: #c88;
+$dark-highlight: #650;
+
+
+// Dark
+.dark {
+  background-color: $dark-100;
+  color: $dark-text;
+
+  a {
+    color: $dark-link;
+    text-decoration-color: $dark-400;
+
+    &:hover {
+      color: $dark-link-hover;
+    }
+  }
+
+  button,
+  input {
+    background-color: $dark;
+    border-color: $dark-200;
+
+    &[type="submit"], &[type="button"] {
+      background-color: $dark-200;
+
+      &:hover {
+        background-color: $dark-400;
+      }
+    }
+  }
+
+  table thead th {
+    border-color: $dark-400;
+  }
+  table tbody tr:not(:last-of-type) td {
+    border-color: $dark-200;
+  }
+
+  .documentwrapper {
+    background-color: $dark;
+  }
+
+  .body .highlighted {
+    background-color: $dark-highlight;
+  }
+
+  .headerlink {
+    color: $dark-400;
+
+  }
+
+  .related {
+    border-color: $dark-200;
+  }
+
+  .footer,
+  .related,
+  .sphinxsidebar .description,
+  .figure .caption,
+  blockquote,
+  .admonition,
+  .sidebar,
+  .topic,
+  .headerlink:hover {
+    color: $dark-600;
+  }
+}

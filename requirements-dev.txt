@@ -1,0 +1,6 @@
+-e .
+
+libsass
+sphinx
+twine
+wheel
