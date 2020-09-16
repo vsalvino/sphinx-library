@@ -11,7 +11,7 @@ setup(
     long_description_content_type="text/x-rst",
     author="Vince Salvino",
     author_email="salvino@coderedcorp.com",
-    url="https://github.com/vsalvino/sphinx-library",
+    url="https://vsalvino.github.io/sphinx-library/",
     license="MIT",
     packages=["sphinx_library"],
     include_package_data=True,
