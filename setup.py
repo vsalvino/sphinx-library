@@ -5,7 +5,7 @@ with open("README.rst", encoding="utf8") as readme_file:
 
 setup(
     name="sphinx-library",
-    version="1.0",
+    version="1.0.1",
     description="Typography-centric Sphinx theme that reads like a good book.",
     long_description=readme,
     long_description_content_type="text/x-rst",
@@ -21,7 +21,7 @@ setup(
         "Framework :: Sphinx",
         "Framework :: Sphinx :: Theme",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
