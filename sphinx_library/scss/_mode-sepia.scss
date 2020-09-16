@@ -25,7 +25,9 @@ $sepia-highlight: #fea;
   }
 
   button,
-  input {
+  input,
+  select,
+  textarea {
     background-color: $sepia;
     border-color: $sepia-200;
 

@@ -25,7 +25,9 @@ $light-highlight: #fff6cf;
   }
 
   button,
-  input {
+  input,
+  select,
+  textarea {
     background-color: $light;
     border-color: $light-200;
 
