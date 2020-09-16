@@ -11,6 +11,10 @@ book. Features include:
 
 * Mobile-friendly responsive design.
 
+`Source Code <https://github.com/vsalvino/sphinx-library>`_ |
+`Documentation <https://vsalvino.github.io/sphinx-library>`_ |
+`PyPI <https://pypi.org/project/sphinx-library/>`_
+
 
 Design
 ------
