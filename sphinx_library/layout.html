@@ -4,10 +4,10 @@
 {{ super() }}
 {%- if theme_typography %}
 {% set theme_typography = theme_typography.lower() %}
-<link rel="stylesheet" href="{{ pathto('_static/library/type-' ~ theme_typography ~ '.css', 1) }}" type="text/css" />
+<link rel="stylesheet" id="sphinx-library-type" href="{{ pathto('_static/library/type-' ~ theme_typography ~ '.css', 1) }}" type="text/css" />
 {%- endif %}
 <link rel="stylesheet" href="{{ pathto('_static/custom.css', 1) }}" type="text/css" />
-<meta name="viewport" content="width=device-width, initial-scale=0.875" />
+<meta name="viewport" content="width=device-width, initial-scale=0.9" />
 <script>
   mobile_menu_content = "";
   function toggleMenu() {

@@ -1,11 +1,37 @@
-Sample Element Styles
-=====================
+Demo & Sample Elements
+======================
 
 This document provides a sampling of commonly used reStructuredText directives
 and elements for testing out and viewing the theme.
 
 See the full `reStructuredText Markup Specification
 <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html>`_.
+
+Use the dropdown below to dynamically switch typography stacks on this page
+(note that the content may jitter while it loads the new fonts).
+
+.. raw:: html
+
+    <select id="type-chooser">
+      <option value="academy">Academy</option>
+      <option value="academy-native">Academy-native</option>
+      <option value="book" selected>Book</option>
+      <option value="book-native">Book-native</option>
+      <option value="engineer">Engineer</option>
+      <option value="engineer-native">Engineer-native</option>
+      <option value="humanist">Humanist</option>
+      <option value="humanist-native">Humanist-native</option>
+      <option value="swiss">Swiss</option>
+      <option value="swiss-native">Swiss-native</option>
+    </select>
+    <script>
+      $("#type-chooser").change(function() {
+        $("#sphinx-library-type").attr(
+          "href",
+          "_static/library/type-" + $(this).val() + ".css"
+        );
+      });
+    </script>
 
 
 Ligatures & Kerning
