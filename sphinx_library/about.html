@@ -1,3 +1,15 @@
+{%- if logo %}
+<p class="logo">
+  <a href="{{ pathto(master_doc)|e }}" title="{{ project }}">
+    {% if '://' in logo %}
+    <img class="logo" src="{{ logo }}" alt="{{ project }}"/>
+    {% else %}
+    <img class="logo" src="{{ pathto('_static/' + logo, 1)|e }}" alt="{{ project }}"/>
+    {% endif %}
+  </a>
+</p>
+{%- endif %}
+
 {% if theme_show_project_name|tobool %}
 <h1 class="logo {% if logo %}hasimg{% endif %}">
   <a href="{{ pathto(master_doc) }}">{{ project }}</a>

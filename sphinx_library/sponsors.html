@@ -1,0 +1,18 @@
+{%- if theme_sponsors %}
+<h3>{% trans %}{{ theme_sponsors_heading }}{% endtrans %}</h3>
+{%- for sponsor in theme_sponsors %}
+<a class="sponsor {% if sponsor['large'] %}large{% endif %}" href="{{ sponsor.get('href', '#') }}">
+  {%- if '://' in sponsor['image'] -%}
+  <img src="{{ sponsor['image'] }}" alt=""/>
+  {%- elif sponsor['image'] -%}
+  <img src="{{ pathto('_static/' + sponsor['image'], 1)|e }}" alt=""/>
+  {%- endif -%}
+  {%- if sponsor['title'] or sponsor['note'] -%}
+  <div class="sponsor-info">
+    {% if sponsor['title'] %}<strong>{{ sponsor['title'] }}</strong>{% endif %}
+    {% if sponsor['note'] %}<span>{{ sponsor['note'] }}</span>{% endif %}
+  </div>
+  {%- endif -%}
+</a>
+{%- endfor %}
+{%- endif %}

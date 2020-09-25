@@ -29,6 +29,7 @@ reorder them as you see fit:
             "globaltoc.html",     # Global table of contents.
             #"localtoc.html",     # Contents of the current page.
             "readingmodes.html",  # Light/sepia/dark color schemes.
+            "sponsors.html",      # Fancy sponsor links.
         ]
     }
 

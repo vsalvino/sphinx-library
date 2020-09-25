@@ -86,6 +86,27 @@ The following theme options are available:
 * **show_relbar_top** --- Boolean to show Previous/Next links at the top of the
   page. Defaults to False.
 
+* **sponsors** --- List of dictionaries containing sponsors or other highlighted
+  links in the sidebar. Dictionary contents are all optional and include:
+
+  .. code-block:: python
+
+      # conf.py
+      html_theme_options = {
+          "sponsors": [
+              {
+                  "href": "http://example.com",  # URL to link to.
+                  "image": "logo.png",           # URL or path to image.
+                  "large": True,                 # Use large image format.
+                  "title": "Sponsor Us",         # Shown beside/below image.
+                  "note": "Become a member.",    # Shown beside/below image.
+              },
+          ],
+      }
+
+* **sponsors_heading** --- Heading above the sponsors section in the sidebar,
+  if ``sponsors`` is provided. Defaults to "Sponsors".
+
 * **typography** --- The typeface stack to use throughout the docs. One of the
   following values:
 

@@ -43,22 +43,24 @@
 <div class="document">
 
   
-  <div class="mobile-menu">
+  <nav class="mobile-menu" role="navigation">
     
-<button type="button" id="menu-toggler" onclick="toggleMenu();"
-  data-open="× Close">≡ Menu</button>
-<a href="index.html">sphinx-library</a>
-<noscript>
-  <div>
-    JavaScript is required to open/close mobile menu.
-  </div>
-</noscript>
-  </div>
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="index.html">sphinx-library</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
   
 
   
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+
+
 <h1 class="logo ">
   <a href="index.html">sphinx-library</a>
 </h1>
@@ -107,12 +109,11 @@
     JavaScript is required to toggle reading modes.
   </div>
 </noscript>
-        </div>
-      </div>
+  </nav>
   <div class="documentwrapper">
     
 
-    <article class="body" role="main">
+    <main class="body" role="main" id="main">
       
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
@@ -137,6 +138,7 @@ reorder them as you see fit:</p>
         <span class="s2">&quot;globaltoc.html&quot;</span><span class="p">,</span>     <span class="c1"># Global table of contents.</span>
         <span class="c1">#&quot;localtoc.html&quot;,     # Contents of the current page.</span>
         <span class="s2">&quot;readingmodes.html&quot;</span><span class="p">,</span>  <span class="c1"># Light/sepia/dark color schemes.</span>
+        <span class="s2">&quot;sponsors.html&quot;</span><span class="p">,</span>      <span class="c1"># Fancy sponsor links.</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
@@ -153,7 +155,7 @@ when wrapping lines (just like a printed book).</p>
 </div>
 
 
-    </article>
+    </main>
     <nav class="related bottom" role="navigation">
   <a class="prev" href="index.html" title="Previous">
     &larr; Library Sphinx Theme

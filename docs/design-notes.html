@@ -43,22 +43,24 @@
 <div class="document">
 
   
-  <div class="mobile-menu">
+  <nav class="mobile-menu" role="navigation">
     
-<button type="button" id="menu-toggler" onclick="toggleMenu();"
-  data-open="× Close">≡ Menu</button>
-<a href="index.html">sphinx-library</a>
-<noscript>
-  <div>
-    JavaScript is required to open/close mobile menu.
-  </div>
-</noscript>
-  </div>
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="index.html">sphinx-library</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
   
 
   
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+
+
 <h1 class="logo ">
   <a href="index.html">sphinx-library</a>
 </h1>
@@ -114,12 +116,11 @@
     JavaScript is required to toggle reading modes.
   </div>
 </noscript>
-        </div>
-      </div>
+  </nav>
   <div class="documentwrapper">
     
 
-    <article class="body" role="main">
+    <main class="body" role="main" id="main">
       
   <div class="section" id="design-notes">
 <h1>Design Notes<a class="headerlink" href="#design-notes" title="Permalink to this headline">¶</a></h1>
@@ -226,7 +227,7 @@ alternative which is commonly available in various GNU/Linux operating systems).
 </div>
 
 
-    </article>
+    </main>
     <nav class="related bottom" role="navigation">
   <a class="prev" href="customize.html" title="Previous">
     &larr; Customization

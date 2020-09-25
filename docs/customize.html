@@ -43,22 +43,24 @@
 <div class="document">
 
   
-  <div class="mobile-menu">
+  <nav class="mobile-menu" role="navigation">
     
-<button type="button" id="menu-toggler" onclick="toggleMenu();"
-  data-open="× Close">≡ Menu</button>
-<a href="index.html">sphinx-library</a>
-<noscript>
-  <div>
-    JavaScript is required to open/close mobile menu.
-  </div>
-</noscript>
-  </div>
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="index.html">sphinx-library</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
   
 
   
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+
+
 <h1 class="logo ">
   <a href="index.html">sphinx-library</a>
 </h1>
@@ -113,12 +115,11 @@
     JavaScript is required to toggle reading modes.
   </div>
 </noscript>
-        </div>
-      </div>
+  </nav>
   <div class="documentwrapper">
     
 
-    <article class="body" role="main">
+    <main class="body" role="main" id="main">
       
   <div class="section" id="customization">
 <h1>Customization<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h1>
@@ -185,6 +186,25 @@ sidebar.</p></li>
 of the page. Defaults to True.</p></li>
 <li><p><strong>show_relbar_top</strong> — Boolean to show Previous/Next links at the top of the
 page. Defaults to False.</p></li>
+<li><p><strong>sponsors</strong> — List of dictionaries containing sponsors or other highlighted
+links in the sidebar. Dictionary contents are all optional and include:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;sponsors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>  <span class="c1"># URL to link to.</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;logo.png&quot;</span><span class="p">,</span>           <span class="c1"># URL or path to image.</span>
+            <span class="s2">&quot;large&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>                 <span class="c1"># Use large image format.</span>
+            <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Sponsor Us&quot;</span><span class="p">,</span>         <span class="c1"># Shown beside/below image.</span>
+            <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;Become a member.&quot;</span><span class="p">,</span>    <span class="c1"># Shown beside/below image.</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>sponsors_heading</strong> — Heading above the sponsors section in the sidebar,
+if <code class="docutils literal notranslate"><span class="pre">sponsors</span></code> is provided. Defaults to “Sponsors”.</p></li>
 <li><p><strong>typography</strong> — The typeface stack to use throughout the docs. One of the
 following values:</p>
 <ul class="simple">
@@ -255,7 +275,7 @@ to either that file’s path, or the directory it lives within (i.e.
 </div>
 
 
-    </article>
+    </main>
     <nav class="related bottom" role="navigation">
   <a class="prev" href="installation.html" title="Previous">
     &larr; Installation

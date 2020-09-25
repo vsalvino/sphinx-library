@@ -42,22 +42,24 @@
 <div class="document">
 
   
-  <div class="mobile-menu">
+  <nav class="mobile-menu" role="navigation">
     
-<button type="button" id="menu-toggler" onclick="toggleMenu();"
-  data-open="× Close">≡ Menu</button>
-<a href="index.html">sphinx-library</a>
-<noscript>
-  <div>
-    JavaScript is required to open/close mobile menu.
-  </div>
-</noscript>
-  </div>
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="index.html">sphinx-library</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
   
 
   
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+
+
 <h1 class="logo ">
   <a href="index.html">sphinx-library</a>
 </h1>
@@ -115,12 +117,11 @@
     JavaScript is required to toggle reading modes.
   </div>
 </noscript>
-        </div>
-      </div>
+  </nav>
   <div class="documentwrapper">
     
 
-    <article class="body" role="main">
+    <main class="body" role="main" id="main">
       
   <div class="section" id="demo-sample-elements">
 <h1>Demo &amp; Sample Elements<a class="headerlink" href="#demo-sample-elements" title="Permalink to this headline">¶</a></h1>
@@ -396,7 +397,7 @@ dictumst vestibulum rhoncus est. Volutpat commodo sed egestas egestas fringilla.
 </div>
 
 
-    </article>
+    </main>
     <nav class="related bottom" role="navigation">
   <a class="prev" href="contributing.html" title="Previous">
     &larr; Contributing

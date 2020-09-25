@@ -379,6 +379,38 @@ pre {
   }
 }
 
+/// Theme-specific elements ---------------------------------------------------
+
+.sponsor {
+  border-radius: 6px;
+  border-width: 1.5px;
+  border-style: solid;
+  font-size: $font-smaller;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  line-height: normal;
+  margin-bottom: $indent/4;
+  overflow: hidden;
+
+  img {
+    width: 30%;
+  }
+  &.large img {
+    width: 100%;
+  }
+  .sponsor-info {
+    width: 70%;
+    margin: 0;
+    padding: 0.5em;
+
+    strong { display: block; }
+  }
+  &.large .sponsor-info {
+    width: 100%;
+  }
+}
+
 
 /// Responsive styles ---------------------------------------------------------
 

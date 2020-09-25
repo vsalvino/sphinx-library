@@ -39,14 +39,14 @@
 {%- endmacro %}
 
 {%- macro mobile_menu() %}
-<button type="button" id="menu-toggler" onclick="toggleMenu();"
-  data-open="× {{ _('Close') }}">≡ {{ _('Menu') }}</button>
-<a href="{{ pathto(master_doc) }}">{{ project }}</a>
-<noscript>
-  <div>
-    {{ _('JavaScript is required to open/close mobile menu') }}.
-  </div>
-</noscript>
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× {{ _('Close') }}">≡ {{ _('Menu') }}</button>
+  <a href="{{ pathto(master_doc) }}">{{ project }}</a>
+  <noscript>
+    <div>
+      {{ _('JavaScript is required to open/close mobile menu') }}.
+    </div>
+  </noscript>
 {%- endmacro %}
 
 {%- macro relbar_links() %}
@@ -63,6 +63,12 @@
   <div class="clear"></div>
 {%- endmacro %}
 
+{%- macro library_sidebar() %}
+  {%- for sidebartemplate in sidebars %}
+  {%- include sidebartemplate %}
+  {%- endfor %}
+{%- endmacro %}
+
 {%- block relbar1 %}{% endblock %}
 {%- block relbar2 %}{% endblock %}
 
@@ -75,12 +81,18 @@
 <div class="document">
 
   {% block mobile_menu %}
-  <div class="mobile-menu">
+  <nav class="mobile-menu" role="navigation">
     {{ mobile_menu() }}
-  </div>
+  </nav>
   {% endblock %}
 
-  {{ sidebar() }}
+  {% block sidebar %}
+  {%- if render_sidebar %}
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    {{ library_sidebar() }}
+  </nav>
+  {%- endif %}
+  {%- endblock %}
 
   {%- block document %}
   <div class="documentwrapper">
@@ -101,9 +113,9 @@
     {%- endif %}
     {% endblock %}
 
-    <article class="body" role="main">
+    <main class="body" role="main" id="main">
       {% block body %} {% endblock %}
-    </article>
+    </main>
 
     {%- block relbar_bottom %}
     {%- if theme_show_relbar_bottom|tobool %}

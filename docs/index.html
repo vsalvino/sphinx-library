@@ -42,22 +42,24 @@
 <div class="document">
 
   
-  <div class="mobile-menu">
+  <nav class="mobile-menu" role="navigation">
     
-<button type="button" id="menu-toggler" onclick="toggleMenu();"
-  data-open="× Close">≡ Menu</button>
-<a href="#">sphinx-library</a>
-<noscript>
-  <div>
-    JavaScript is required to open/close mobile menu.
-  </div>
-</noscript>
-  </div>
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="#">sphinx-library</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
   
 
   
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+
+
 <h1 class="logo ">
   <a href="#">sphinx-library</a>
 </h1>
@@ -106,12 +108,11 @@
     JavaScript is required to toggle reading modes.
   </div>
 </noscript>
-        </div>
-      </div>
+  </nav>
   <div class="documentwrapper">
     
 
-    <article class="body" role="main">
+    <main class="body" role="main" id="main">
       
   <div class="section" id="library-sphinx-theme">
 <h1>Library Sphinx Theme<a class="headerlink" href="#library-sphinx-theme" title="Permalink to this headline">¶</a></h1>
@@ -159,7 +160,7 @@ modern than “academy”.</p></li>
 </div>
 
 
-    </article>
+    </main>
     <nav class="related bottom" role="navigation">
   <a class="next" href="installation.html" title="Next">
     Installation &rarr;
