@@ -13,8 +13,8 @@ $cambria-font:
   "Bitstream Charter", "Linux Libertine", "Linux Libertine O",
   // Fallback
   serif;
-$cambria-size: 17.5px;
-$cambria-line: 1.7;
+$cambria-size: 18.5px;
+$cambria-line: 1.5;
 @mixin cambria-native {
   font-family: $cambria-font;
   font-size: $cambria-size;
@@ -32,7 +32,7 @@ $century-font:
   "Didot",
   // Fallback
   serif;
-$century-size: 17px;
+$century-size: 17.5px;
 $century-line: 1.7;
 @mixin century-native {
   font-family: $century-font;
@@ -75,7 +75,7 @@ $georgia-font:
   "DejaVu Serif",
   // Fallback
   serif;
-$georgia-size: 17px;
+$georgia-size: 18px;
 $georgia-line: 1.7;
 @mixin georgia-native {
   font-family: $georgia-font;
@@ -96,7 +96,7 @@ $helvetica-font:
   "Liberation Sans", "Arimo",
   // Fallback
   sans-serif;
-$helvetica-size: 17px;
+$helvetica-size: 18px;
 $helvetica-line: 1.7;
 @mixin helvetica-native {
   font-family: $helvetica-font;
@@ -136,7 +136,7 @@ $trebuchet-font:
   "Noto Sans CJK SC", "Noto Sans CJK TC",
   // Fallback.
   sans-serif;
-$trebuchet-size: 17px;
+$trebuchet-size: 18px;
 $trebuchet-line: 1.7;
 @mixin trebuchet-native {
   font-family: $trebuchet-font;
