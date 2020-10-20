@@ -59,7 +59,7 @@ The following theme options are available:
 * **globaltoc_collapse** --- Boolean to only expand subsections of the current
   document in ``globaltoc.html``. Defaults to True.
 
-* **globaltoc_includehidden** ---- Boolean to show even those subsections in
+* **globaltoc_includehidden** --- Boolean to show even those subsections in
   ``globaltoc.html`` which have been included with the ``:hidden:``
   flag of the toctree directive. Defaults to True.
 

@@ -9,5 +9,10 @@ h1 {
 }
 
 code, pre {
-  @include mono-native;
+  font-family: $mono-font;
+  line-height: $mono-line;
+}
+
+pre {
+  font-size: $mono-size;
 }

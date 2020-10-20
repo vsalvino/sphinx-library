@@ -33,8 +33,16 @@ body {
   padding: 0;
 }
 
-p, code, pre, table {
+dl, p, pre, table {
   margin: $indent/2 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: $indent/2 0 $indent/2 $indent;
 }
 
 ol, ul {
@@ -276,7 +284,7 @@ blockquote,
 .admonition,
 .sidebar,
 .topic {
-  margin: $indent/2 0 $indent $indent/2;
+  margin: $indent/2 0 $indent/2 $indent;
   padding: 0;
   font-style: italic;
 
@@ -349,6 +357,11 @@ table {
 // Code
 
 code {
+  font-size: $font-smaller;
+  hyphens: none;
+}
+
+p code {
   padding: 0 0.5em;
 }
 

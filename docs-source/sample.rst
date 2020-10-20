@@ -195,6 +195,18 @@ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 
 
+Definition Lists
+----------------
+
+Term
+    And here is the definition.
+
+    A second paragraph further elaborates.
+
+Another term with ``code`` and *italics* emphasis:
+    Here is the definition.
+
+
 Images
 ------
 

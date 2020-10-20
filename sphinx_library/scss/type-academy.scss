@@ -11,6 +11,9 @@ body {
 
 code, pre {
   font-family: "Computer Modern Typewriter", $courier-font;
-  font-size: 15px;
   line-height: 1.4;
+}
+
+pre {
+  font-size: 15px;
 }

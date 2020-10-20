@@ -5,5 +5,10 @@ body {
 }
 
 code, pre {
-  @include courier-native;
+  font-family: $courier-font;
+  line-height: $courier-line;
+}
+
+pre {
+  font-size: $courier-size;
 }

@@ -10,6 +10,9 @@ body {
 
 code, pre {
   font-family: "IBM Plex Mono", $mono-font;
-  font-size: $mono-size;
   line-height: $mono-line;
+}
+
+pre {
+  font-size: $mono-size;
 }
