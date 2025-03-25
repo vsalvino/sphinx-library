@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Contributing &#8212; sphinx-library  documentation</title>
-    <link rel="stylesheet" href="_static/library/library.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=c03c27c6" />
+    <link rel="stylesheet" type="text/css" href="_static/library/library.css?v=fa49c7df" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Demo &amp; Sample Elements" href="sample.html" />
@@ -71,16 +69,16 @@
 
 
 
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Contents</h3>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Contents</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="customize.html">Customization</a></li>
@@ -114,11 +112,11 @@
 
     <main class="body" role="main" id="main">
       
-  <div class="section" id="contributing">
-<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+  <section id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Link to this heading">¶</a></h1>
 <p>Clone from the git repo at: <a class="reference external" href="https://github.com/vsalvino/sphinx-library">https://github.com/vsalvino/sphinx-library</a>.</p>
 <p>Create a virtual environment and install the dev dependencies:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -r requirements-dev.txt
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
 </pre></div>
 </div>
 <p>All theme styling is done via SCSS, which is compiled into CSS before publishing
@@ -126,20 +124,20 @@ the package. Do not edit the theme’s CSS files directly.</p>
 <p>Pygments styling is handled directly in <code class="docutils literal notranslate"><span class="pre">sphinx_library.themes</span></code>. These themes
 generate SCSS files which are then compiled into CSS files and included with
 the theme.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">build.py</span></code> script handles all of the SCSS compilation, and also builds the
+<p>The <code class="docutils literal notranslate"><span class="pre">build_library.py</span></code> script handles all of the SCSS compilation, and also builds the
 project documentation.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python build.py
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>build_library.py
 </pre></div>
 </div>
 <p>Docs hosting is handled by GitHub pages, so the source RST files are in
 <code class="docutils literal notranslate"><span class="pre">docs-source</span></code> and the built HTML output is in <code class="docutils literal notranslate"><span class="pre">docs/</span></code>. Due to the nature of
 GitHub pages the built HTML should be committed whenever it changes.</p>
 <p>Finally, to build a package and upload to PyPI:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python setup.py sdist bdist_wheel
-<span class="gp">$</span> twine upload dist/*
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>build
+<span class="gp">$ </span>twine<span class="w"> </span>upload<span class="w"> </span>dist/*
 </pre></div>
 </div>
-</div>
+</section>
 
 
     </main>
@@ -159,7 +157,7 @@ GitHub pages the built HTML should be committed whenever it changes.</p>
   <div class="clear"></div>
 </div>
 <footer class="footer" role="contentinfo">
-    &copy; Copyright 2020 Vince Salvino.
+    &copy; Copyright 2025 Vince Salvino.
   
   Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
   <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.

@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Customization &#8212; sphinx-library  documentation</title>
-    <link rel="stylesheet" href="_static/library/library.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=c03c27c6" />
+    <link rel="stylesheet" type="text/css" href="_static/library/library.css?v=fa49c7df" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Design Notes" href="design-notes.html" />
@@ -71,16 +69,16 @@
 
 
 
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Contents</h3>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Contents</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Customization</a><ul>
@@ -120,10 +118,10 @@
 
     <main class="body" role="main" id="main">
       
-  <div class="section" id="customization">
-<h1>Customization<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="sphinx-options">
-<h2>Sphinx Options<a class="headerlink" href="#sphinx-options" title="Permalink to this headline">¶</a></h2>
+  <section id="customization">
+<h1>Customization<a class="headerlink" href="#customization" title="Link to this heading">¶</a></h1>
+<section id="sphinx-options">
+<h2>Sphinx Options<a class="headerlink" href="#sphinx-options" title="Link to this heading">¶</a></h2>
 <p>In addition to theme options (below), some common Sphinx options (set in
 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>) are also respected by the theme. See the full link of <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html">Sphinx
 configuration options</a>.</p>
@@ -137,9 +135,9 @@ elsewhere in the docs.</p></li>
 <li><p><strong>html_show_sourcelink</strong> — Show the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> source link in the footer.</p></li>
 <li><p><strong>html_show_sphinx</strong> — Show “Created using Sphinx” in the footer.</p></li>
 </ul>
-</div>
-<div class="section" id="theme-options">
-<h2>Theme Options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="theme-options">
+<h2>Theme Options<a class="headerlink" href="#theme-options" title="Link to this heading">¶</a></h2>
 <p>Options are set in the <code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code> variable in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
 <span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
@@ -228,9 +226,9 @@ following values:</p>
 <p>See typography section below for more details.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="typography">
-<h2>Typography<a class="headerlink" href="#typography" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="typography">
+<h2>Typography<a class="headerlink" href="#typography" title="Link to this heading">¶</a></h2>
 <p>Several hand-tuned typography stacks are included to change the feel of your
 documentation. Each features carefully selected typeface pairings which have
 been balanced with the theme layout to create a book-like reading experience.</p>
@@ -254,9 +252,9 @@ primarily distribute the HTML offline.</p>
 <p>To implement your own custom type stack, set the <code class="docutils literal notranslate"><span class="pre">typography</span></code> option to
 <code class="docutils literal notranslate"><span class="pre">None</span></code> and then add your own styles following the Custom CSS instructions
 below.</p>
-</div>
-<div class="section" id="custom-css">
-<h2>Custom CSS<a class="headerlink" href="#custom-css" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="custom-css">
+<h2>Custom CSS<a class="headerlink" href="#custom-css" title="Link to this heading">¶</a></h2>
 <p>Library’s CSS is designed to be easily overridden. This means it avoids complex
 queries, and does not specify attributes more than once where possible (e.g.
 color, font, font-size, etc. are only set on the <code class="docutils literal notranslate"><span class="pre">body</span></code> element, so changing
@@ -270,8 +268,8 @@ named <code class="docutils literal notranslate"><span class="pre">_static/</spa
 to either that file’s path, or the directory it lives within (i.e.
 <code class="docutils literal notranslate"><span class="pre">&quot;_static&quot;</span></code>).</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
     </main>
@@ -291,7 +289,7 @@ to either that file’s path, or the directory it lives within (i.e.
   <div class="clear"></div>
 </div>
 <footer class="footer" role="contentinfo">
-    &copy; Copyright 2020 Vince Salvino.
+    &copy; Copyright 2025 Vince Salvino.
   
   Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
   <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.

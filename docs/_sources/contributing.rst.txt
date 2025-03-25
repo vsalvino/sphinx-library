@@ -16,12 +16,12 @@ Pygments styling is handled directly in ``sphinx_library.themes``. These themes
 generate SCSS files which are then compiled into CSS files and included with
 the theme.
 
-The ``build.py`` script handles all of the SCSS compilation, and also builds the
+The ``build_library.py`` script handles all of the SCSS compilation, and also builds the
 project documentation.
 
 .. code-block:: console
 
-    $ python build.py
+    $ python build_library.py
 
 Docs hosting is handled by GitHub pages, so the source RST files are in
 ``docs-source`` and the built HTML output is in ``docs/``. Due to the nature of
@@ -31,5 +31,5 @@ Finally, to build a package and upload to PyPI:
 
 .. code-block:: console
 
-    $ python setup.py sdist bdist_wheel
+    $ python -m build
     $ twine upload dist/*
