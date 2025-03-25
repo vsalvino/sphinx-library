@@ -11,7 +11,6 @@ classifiers = [
     "Framework :: Sphinx",
     "Framework :: Sphinx :: Theme",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -19,7 +18,8 @@ classifiers = [
     "Topic :: Software Development :: Documentation",
 ]
 description = "Typography-centric Sphinx theme that reads like a good book."
-license = {file = "LICENSE.txt"}
+license = "MIT"
+license-files = ["LICENSE.txt"]
 name = "sphinx-library"
 readme = "README.rst"
 version = "1.1.2"
@@ -42,8 +42,11 @@ case-sensitive = false
 force-single-line = true
 lines-after-imports = 2
 
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+# Everything within sphinx_library in version control is included by
+# default. Exclude the SCSS files since we ship built CSS instead.
 [tool.setuptools]
 packages = ["sphinx_library"]
 
-[tool.setuptools.package-data]
-"sphinx_library" = ["*"]
+[tool.setuptools.exclude-package-data]
+sphinx_library = ["scss/*"]
