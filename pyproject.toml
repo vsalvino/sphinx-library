@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=65.5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    {name = "Vince Salvino", email = "salvino@coderedcorp.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Theme",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+]
+description = "Typography-centric Sphinx theme that reads like a good book."
+license = {file = "LICENSE.txt"}
+name = "sphinx-library"
+readme = "README.rst"
+version = "1.1.2"
+
+[project.entry-points."sphinx.html_themes"]
+library = "sphinx_library"
+
+[project.urls]
+Documentation = "https://vsalvino.github.io/sphinx-library/"
+Source = "https://github.com/vsalvino/sphinx-library"
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+case-sensitive = false
+force-single-line = true
+lines-after-imports = 2
+
+[tool.setuptools]
+packages = ["sphinx_library"]
+
+[tool.setuptools.package-data]
+"sphinx_library" = ["*"]
