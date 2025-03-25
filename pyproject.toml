@@ -22,7 +22,7 @@ license = "MIT"
 license-files = ["LICENSE.txt"]
 name = "sphinx-library"
 readme = "README.rst"
-version = "1.1.2"
+version = "1.1.3"
 
 [project.entry-points."sphinx.html_themes"]
 library = "sphinx_library"
