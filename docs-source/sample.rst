@@ -12,7 +12,7 @@ Use the dropdown below to dynamically switch typography stacks on this page
 
 .. raw:: html
 
-    <select id="type-chooser">
+    <select id="type-chooser" onchange="typeChoose()">
       <option value="academy">Academy</option>
       <option value="academy-native">Academy-native</option>
       <option value="book" selected>Book</option>
@@ -25,12 +25,11 @@ Use the dropdown below to dynamically switch typography stacks on this page
       <option value="swiss-native">Swiss-native</option>
     </select>
     <script>
-      $("#type-chooser").change(function() {
-        $("#sphinx-library-type").attr(
-          "href",
-          "_static/library/type-" + $(this).val() + ".css"
-        );
-      });
+      function typeChoose() {
+        sel = document.getElementById("type-chooser");
+        css = document.getElementById("sphinx-library-type");
+        css.setAttribute("href", "_static/library/type-" + sel.value + ".css");
+      }
     </script>
 
 
@@ -210,15 +209,15 @@ Another term with ``code`` and *italics* emphasis:
 Images
 ------
 
-Images, C/O https://placeholder.com/.
+Images, C/O https://placehold.co/.
 
 Image:
 
-.. image:: https://via.placeholder.com/300.png?text=Placeholder
+.. image:: https://placehold.co/600x400?text=Placeholder
 
 Figure:
 
-.. figure:: https://via.placeholder.com/300.png?text=Placeholder
+.. figure:: https://placehold.co/600x400?text=Placeholder
    :alt: Placeholder
 
    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
